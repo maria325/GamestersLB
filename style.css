@@ -1,0 +1,362 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  box-sizing:border-box;
+ 
+}
+
+  
+@media (max-width: 768px) {
+
+  .sidebar.show {
+    display: block !important;
+  }
+  .hidden-mobile {
+    display: none;
+  }
+  .search-input {
+    width: 100%; /* Full width on smaller screens */
+    width: 280px;
+    margin-right: -70px;
+  }
+
+  #cancel-button {
+    display: block;
+    margin-top: 3px; /* Add some spacing between the input and the button */
+    width: 100%; /* Full width on smaller screens */
+    margin-right: -225px;
+  }
+  .fa-xs {
+    font-size: 20px;
+    }
+    .search-input {
+      width: 100%; /* Full width on smaller screens */
+      width: 280px;
+      margin-right: -70px;
+    }
+
+    #cancel-button {
+      display: block;
+      margin-top: 3px; /* Add some spacing between the input and the button */
+      width: 100%; /* Full width on smaller screens */
+      margin-right: -225px;
+    }
+    .slideshow-container {
+      top: 50px; /* Adjust this value for smaller screens */
+    }
+    .mySlides {
+      width: 100%;
+      height: auto;
+      margin-top: -405px;
+      margin-left: 0;
+      margin-right: 0;
+     
+    }
+}
+/* Medium screens (between 768px and 992px) */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .navbar img {
+    animation: fallingAnimation 4s infinite linear;
+
+  }
+
+  .slideshow-container {
+    top: 50px;
+  }
+  .mySlides {
+    width: 90%;
+    height: auto;
+    margin-top: -200px;
+    margin-left: 0;
+    margin-right: 0;
+   
+  }
+  #cancel-button {
+    display: block;
+    margin-top: 3px; /* Add some spacing between the input and the button */
+    width: 100%; /* Full width on smaller screens */
+    margin-right: -225px;
+  }
+}
+/* Large screens (above 992px) */
+@media screen and (min-width: 992px) {
+
+
+  .slideshow-container {
+    top: 50px;
+  }
+  .mySlides {
+    width: 90%;
+    height: auto;
+    margin-top: -60px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 260px;
+  background: #1034a6;
+  padding: 15px;
+  z-index: 99;
+}
+.logo {
+  font-size: 25px;
+  padding: 0 15px;
+}
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+ font-family:gulfs display ;
+ color: yellow;
+  
+}
+.sidebar a  img{
+    width: 120%;
+    margin-top: -100px;
+    
+  }
+.menu-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+}
+.menu-content::-webkit-scrollbar {
+  display: none;
+}
+.menu-items {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+.submenu-active .menu-items {
+  transform: translateX(-56%);
+}
+.menu-title {
+  color: yellow;
+  font-size: 14px;
+  padding: 15px 20px;
+  font-family: 'Red Hat Display',sans-serif;
+}
+.item a,
+.submenu-item {
+  padding: 16px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+}
+.item i {
+  font-size: 12px;
+}
+.item a{
+  font-family: 'Red Hat Display',sans-serif;
+  color: white;
+}
+.item a:hover,
+.submenu-item:hover,
+.submenu .menu-title:hover {
+  background:#1b3897 ;
+}
+.submenu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  color: yellow;
+}
+.submenu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: calc(-100% - 10px);
+  height: calc(100% + 100vh);
+  background: #1034a6;
+  display: none;
+}
+.show-submenu ~ .submenu {
+  display: block;
+}
+.submenu .menu-title {
+  border-radius: 12px;
+  cursor: pointer;
+}
+.submenu .menu-title i {
+  margin-right: 10px;
+}
+.navbar,
+.main {
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+.sidebar.close ~ .navbar,
+.sidebar.close ~ .main {
+  left: 0;
+  width: 100%;
+  
+}
+.navbar {
+  position: fixed;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 25px;
+  background: #1034a6;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative; /* Add this line to allow positioning the image inside the navbar */
+  overflow: hidden; 
+}
+.navbar #sidebar-close {
+  cursor: pointer;
+  
+}
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 100;
+  background: #e7f2fd;
+  background-color: #1034a6;
+  overflow: hidden;
+}
+
+.main .rightside{
+  position: absolute;
+  display: inline-block;
+  text-align:center;
+  list-style-type: none;
+  margin-left: 96.5%;
+  border-radius: 5px;
+  border: solid ,#3b5998;
+  padding: 0px;
+
+  }
+  .rightside li{
+    list-style-type :none;
+    padding:6px;
+    margin-right: 8px;
+    transition: .6s;
+    color: white;
+    position: relative;
+    }
+    .rightside li i{
+      font-size: 25px;
+      transition: all 0.3s ease-in-out;
+      }
+  .rightside li:hover{
+        animation: pulse 1s infinite;
+
+        }@keyframes pulse {
+          0% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.2);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+        .rightside li:nth-child(1){
+          background: white;
+          }
+          .rightside li:nth-child(2){
+          background: white;
+          }
+          .rightside li:nth-child(3){
+          background: white;
+          }
+          .rightside li:nth-child(4){
+          background: white;
+          }
+          .rightside li:nth-child(5){
+          background: white;
+          }
+   .search-input {
+            position: fixed;
+            width: 250px;
+            top: 20px; /* Adjust the top position as per your preference */
+            right: 150px; /* Adjust the right position as per your preference */
+            z-index: 999; /* Ensure the search input is on top */
+            padding: 8px 16px;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: white;
+            display: none; /* Hide the input initially */
+          
+          }
+          /* Style the blur overlay */
+   #blur-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black color */
+            backdrop-filter: blur(1px); /* Creates the blur effect */
+            display: none; /* Hide the overlay initially */
+          }
+          #cancel-button {
+            position: absolute;
+            top: 30px; /* Adjust the top position as per your preference */
+            right: 70px; /* Adjust the right position as per your preference */
+            z-index: 999; /* Ensure the cancel button is on top */
+            padding: 0px 12px;
+            border: none;
+            background-color:transparent;
+            color: yellow;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+      
+       /* Slideshow container */
+/* Slideshow container */
+.slideshow-container {
+  max-width: 95%;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  top: -48px; /* Add the height of the navbar here */
+  margin-top: -48px; /* Add a negative value equal to the height of the navbar here */
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  max-width: 100%;
+  height: auto;
+}
+/* Fading animation */
+ .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+          }      
+   @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+          }
+       
+   
+       
+          
+
+
+
+        
+      
